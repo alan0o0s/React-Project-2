@@ -24,10 +24,10 @@ jobs:
 
       - name: Build Microservices Images
         run: |
-          docker build -t alan0o0s/multi-client:latest ./microservices/client
-          docker build -t alan0o0s/multi-nginx:latest ./microservices/nginx
-          docker build -t alan0o0s/multi-server:latest ./microservices/server
-          docker build -t alan0o0s/multi-worker:latest ./microservices/worker
+          docker build -t alan0o0s/multi-client:latest ./client
+          docker build -t alan0o0s/multi-nginx:latest ./nginx
+          docker build -t alan0o0s/multi-server:latest ./server
+          docker build -t alan0o0s/multi-worker:latest ./worker
 
       - name: Push Images to Docker Hub
         run: |
@@ -35,5 +35,4 @@ jobs:
           docker push alan0o0s/multi-nginx:latest
           docker push alan0o0s/multi-server:latest
           docker push alan0o0s/multi-worker:latest
-
 
